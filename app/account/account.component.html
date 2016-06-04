@@ -1,0 +1,25 @@
+<h2>Account</h2>
+
+<div [ngSwitch]="accountService.isLogin">
+
+  <!-- have logged in -->
+  <div *ngSwitchWhen="true">
+    <p>
+      <span>hello {{accountService.currentAccount.id}}&nbsp;</span>
+      <input type="button" value="logout" (click)="accountService.logout()"/>
+    </p>
+  </div>
+
+  <!-- haven't logged in' -->
+  <div *ngSwitchDefault>
+    <form style="margin: 0; padding: 0;">
+      <p>
+        <span>hello guest&nbsp;</span>
+        <input #uid type="text" placeholder="user id"/>
+        <input #password type="password" placeholder="password"/>
+        <input type="button" value="login" (click)="accountService.login(uid.value, password.value)"/>
+      </p>
+    </form>
+  </div>
+
+</div>
