@@ -37,10 +37,11 @@ export class BackendService {
     console.log(`uid: ${uid}, password: ${password}`);
     this.isLogin = true;
     this.currentAccount = {id: uid};
-    this.socket.emit('add user', uid);
+    this.socket.emit('login', uid);
   }
 
   logout() {
+    this.socket.emit('logout');
     this.isLogin = false;
     this.currentAccount = null;
   }
