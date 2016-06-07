@@ -1,0 +1,19 @@
+{
+  "name": "prototype-web-server",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start-debug": "cross-env DEBUG=* node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cross-env": "^1.0.8",
+    "socket.io": "^1.4.6"
+  }
+}
