@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AccountService } from '../account.service'
+import { BackendService } from '../backend.service'
 
 @Component({
   moduleId: module.id,
@@ -10,7 +10,7 @@ import { AccountService } from '../account.service'
 })
 export class AccountComponent implements OnInit {
 
-  constructor(public accountService: AccountService) {}
+  constructor(public accountService: BackendService) {}
 
   ngOnInit() {
   }

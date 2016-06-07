@@ -1,6 +1,6 @@
 <h2>Chatroom</h2>
 <ul id="chatlog">
-  <li *ngFor="let chatlog of chatroomService.chatlog">
+  <li *ngFor="let chatlog of chatlogs">
     <p>{{chatlog.senderId}}:</p>
     <p>{{chatlog.message}}</p>
     <p>at {{chatlog.sendTime}}</p>
@@ -8,5 +8,5 @@
 </ul>
 <form id="new-message">
   <input #message type="text" placeholder="new message" />
-  <input type="button" value="send" (click)="chatroomService.sendMessage(message.value)" />
+  <input type="button" value="send" (click)="sendMessage(message.value)" />
 </form>

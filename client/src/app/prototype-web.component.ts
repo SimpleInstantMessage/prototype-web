@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AccountService } from './account.service'
+import { BackendService } from './backend.service'
 import { AccountComponent } from './account'
 import { ChatroomComponent } from './chatroom'
 
@@ -10,12 +10,12 @@ import { ChatroomComponent } from './chatroom'
   templateUrl: 'prototype-web.component.html',
   styleUrls: ['prototype-web.component.css'],
   directives: [AccountComponent, ChatroomComponent],
-  providers: [AccountService]
+  providers: [BackendService]
 })
 export class PrototypeWebAppComponent {
 
   title = 'prototype-web works!';
 
-  constructor(public accountService: AccountService) {}
+  constructor(public accountService: BackendService) {}
 
 }
