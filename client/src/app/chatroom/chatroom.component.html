@@ -3,7 +3,7 @@
   <li *ngFor="let chatlog of chatlogs">
     <p>{{chatlog.senderId}}:</p>
     <p>{{chatlog.message}}</p>
-    <p>at {{chatlog.sendTime}}</p>
+    <p>at {{chatlog.sendTime.toLocaleString()}}</p>
   </li>
 </ul>
 <form id="new-message">

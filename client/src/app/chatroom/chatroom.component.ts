@@ -21,7 +21,7 @@ export class ChatroomComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subscription = this.backend.onNewMessage().subscribe((event)=>{
-      this.chatlogs.push({senderId: event.username, message: event.message, sendTime: new Date()});
+      this.chatlogs.push({senderId: event.username, message: event.message, sendTime: event.sendTime});
     })
   }
 

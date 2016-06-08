@@ -8,6 +8,7 @@ import { Account } from './shared/account.model'
 class NewMessage {
   username: string;
   message: any;
+  sendTime: Date;
 }
 
 @Injectable()
@@ -22,7 +23,7 @@ export class BackendService {
   constructor() {
     this.socket = io(environment.apiUrl);
     this.socket.on('new message', (data)=>{
-      this.newMessageEventBus.next(data);
+      this.newMessageEventBus.next({username: data.username, message: data.message.message, sendTime: new Date(data.message.sendTime)});
     })
   }
 
@@ -47,7 +48,7 @@ export class BackendService {
   }
 
   sendMessage(message: any) {
-    this.socket.emit('new message', message);
+    this.socket.emit('new message', {message, sendTime: new Date().getTime()});
   }
 
 }
