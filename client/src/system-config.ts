@@ -14,6 +14,7 @@ const packages: any = {
 // put the names of any of your Material components here
 const materialPkgs:string[] = [
   'core',
+  'icon',
   'toolbar'
 ];
 

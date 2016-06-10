@@ -12,6 +12,7 @@ module.exports = function(defaults) {
       'es6-shim/es6-shim.js',
       'reflect-metadata/**/*.+(js|js.map)',
       'rxjs/**/*.+(js|js.map)',
+      'material-design-icons/iconfont/**',
       '@angular/**/*.+(js|js.map)',
       '@angular2-material/**/*'
     ]

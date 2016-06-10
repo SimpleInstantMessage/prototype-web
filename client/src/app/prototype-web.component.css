@@ -1,0 +1,7 @@
+/* see https://material.google.com/layout/structure.html#structure-app-bar */
+.icon {
+    padding: 8px;
+}
+.nav.icon {
+    margin-right: 24px;
+}
