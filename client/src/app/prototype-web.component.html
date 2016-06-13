@@ -1,7 +1,17 @@
+<div id="root">
+
 <md-toolbar color="primary">
   <md-icon class="nav icon">menu</md-icon>
   <span>{{title}}</span>
 </md-toolbar>
 
-<app-account></app-account>
-<app-chatroom *ngIf="accountService.isLogin"></app-chatroom>
+<md-sidenav-layout>
+  <md-sidenav mode="side" opened="true">
+    Hello from sidenav
+  </md-sidenav>
+
+  <app-account></app-account>
+  <app-chatroom *ngIf="accountService.isLogin"></app-chatroom>
+</md-sidenav-layout>
+
+</div>

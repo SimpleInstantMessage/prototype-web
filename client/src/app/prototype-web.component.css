@@ -1,4 +1,18 @@
 /* see https://material.google.com/layout/structure.html#structure-app-bar */
+/* root layout */
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+md-sidenav-layout {
+    flex: 1;
+}
+md-sidenav {
+    width: 320px;
+}
+/* root layout end */
+
 .icon {
     padding: 8px;
 }

@@ -15,6 +15,7 @@ const packages: any = {
 const materialPkgs:string[] = [
   'core',
   'icon',
+  'sidenav',
   'toolbar'
 ];
 
